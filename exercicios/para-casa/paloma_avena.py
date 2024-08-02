@@ -19,16 +19,21 @@
 
 
 import pandas as pd #importar biblioteca pandas
+
 from tabulate import tabulate #importar biblioteca para estilizar os dados
 
 datas = pd.read_csv('vendas_ficticias.csv') #lendo os dados do arquivo vendas_ficticias.csv 
 
 #Imprimindo os dados da tabela
+
 print(tabulate(datas, headers='keys', tablefmt='fancy_grid'))
 
-def dados_estatisticos(x,y,z):#declarando função com os parametros os 3 parametros utilizados
+def dados_estatisticos(x,y,z):#declarando função com os 3 parametros utilizados
+    
     print("\n-------------------------Valores das Vendas-------------------------\n")
+    
     #1. Média, mediana, máximo, mínimo e desvio padrão dos valores das vendas
+    
     avg_sales = round(x.mean(),2)
     median_sales = round(x.median(),2)
     max_sales = round(x.max(),2)
@@ -43,7 +48,7 @@ def dados_estatisticos(x,y,z):#declarando função com os parametros os 3 parame
 
     print("\n-------------------------Quantidade Vendida-------------------------\n")
 
-    #1. Calcular a média, mediana, mínimo, máximo e desvio padrão dos valores das vendas e quantidade vendida.
+    #1. Calcular a média, mediana, mínimo, máximo e desvio padrão da quantidade vendida.
     
     avg_amount = round(y.mean(),2)
     median_amount = round(y.median(),2)
